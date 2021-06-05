@@ -2,7 +2,7 @@
 Source Code and Doccuments: https://github.com/mingkp3/PairsCards.git
 # The main consept
 This is a project that make pairs-cards game (back-end) to send an API to front-end developer.
-There are many path including function for the game such as authenfication, shuffle cards, collect tha click or best click of clients, and play new game whenever you want.
+There are many path including function for the game such as authenfication, shuffle cards, collect tha click or best click of clients, and play new game whenever you want. Moreover, in deployment step, I added firewall for the system as well. In this game, I protect from cheater by not allow to access by don't use the value in the path which can make the user can change the path for cheating.
 # The reason why I made it
 This is the first time I used FastAPI developed by Sebastián Ramírez and you can see the source code of this framework from https://github.com/tiangolo/fastapi.
 It's a quite challenge for me that made API in this framework as a back-end developer.
