@@ -1,0 +1,15 @@
+The path for front-end that use api from FastAPI.
+There are several paths in this project and some path have more than one function to call, expained by following:
+
+Authentication:
+    /Authentication/        : This path will return the fake user from the system.
+    /users/me/              : This path return the real user in Database via get function from the /Authentication/ path.
+
+Play Game:
+    /shuffle/               : First, we shuffle the cards and return to you in [value, row, column] depend on your graphic postioning (you can change the number of pairs cards and the row/column in the code comment) in json format.
+    /playgame/click_status  : Set initial click condotion if the user play at the first time. The data return [click, My Best, Global Best] in json format.
+    /playgame/card1/        : This path front-end need to post the value of card in this path and it will return [click, card value] in json format.
+    /playgame/card2/        : This path front-end need to post the value of card in this path and it will return [click, card value] in json format.
+    /playgame/resultcard/   : Getting value from the tww previus paths and return the status of card to front-end in order to close/open card. It will return [Status Card and Number of Opn Card] in json format.
+    /playgame/endgame/      : In this game we can end game by open all card (6 pards of cards) so it will return to front-end [Click, My Best, Global Best] bu updating new one in json format.
+    /newgame/               : When user click new game, we will shiffle cards again and this path will return the same result as /shuffle/ path and update the New click [click to "-", My Best, Global Best] in json format.

@@ -1,0 +1,44 @@
+First you loging via root to new Ubuntu server, please command by following steps:
+
+Update and Upgrade server first:
+1.command: sudo apt-get update && apt-get upgrade
+2.command: sudo adduser yourusername
+            <type password and retype password>
+3.command: sudo adduser yourusername sudo <for getting seperuser>
+4.command: login <type yourusername and password>
+
+Download FileZilla and open it:
+5.In FileZilla click Edit > SFTP > Add key file... > Choose yout prive SSH key > click OK (Optional)
+6.In FileZilla clock File > Site Manager > New Site 
+    set:    Protocal: SFTP (or anything you set)
+            Host: <IP of server?
+            User: root (Optional)
+7.Type at Remote site: /home/ and click to folder name "youruser"
+8.Right click and upload file pairscards.py
+
+Back to CMD or terminal:
+Installing Firewall and Setting.
+9.command: sudo apt-get install ufw
+10.command: sudo ufw default allow outgoing
+11.command: sudo ufw default deny incoming
+12.command: sudo ufw allow <your port>
+13.command: sudo ufw allow 8000 <for testing in local>
+14.command: sudo ufw enable
+15.command: sudo apt-get install python3 -pip
+16.command: sudo apt-get install python3-venv
+17.command: sudo python3 -m venv <your virtualenvironment name>
+18.command: sudo chmod -R 777 <your virtualenvironment name>
+19.command: sudo chown -R 777 <your virtualenvironment name>
+20.command: source ./<your virtualenvironment name>/bin/activate
+21.command: pip install --upgrade pip
+22.command: pip install fastapi
+23.command: pip install numpy
+24.command: pip install uvicorn
+25.command: screen -S <name screen>
+26.command: source ./<your virtualenvironment name>/bin/activate
+27.command: uvicorn pairscards:app --host 0.0.0.0 --port 8000 <or your port>
+28."Ctrl+a" and press "d"
+Access your deployment.
+29.<IP of your server>:<your port> 
+
+
